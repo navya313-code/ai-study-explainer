@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Explainer</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>AI Study Explainer</h1>
+        <p>Learn any topic, explained your way.</p>
+    </header>
+
+    <main>
+        <form id="study-form">
+            <label for="topic">What do you want to learn?</label>
+            <input type="text" id="topic" name="topic" placeholder="For example: Photosynthesis" required>
+
+            <p>Explanation type:</p>
+            <label>
+                <input type="radio" name="level" value="simple" checked>
+                Simple
+            </label>
+            <label>
+                <input type="radio" name="level" value="detailed">
+                Detailed
+            </label>
+
+            <label for="language">Language:</label>
+            <select id="language" name="language">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Spanish">Spanish</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+            </select>
+
+            <button type="submit" id="study-button">Study</button>
+        </form>
+        
+        <section id="results">
+
+            <section id="explanation-section">
+                <h2>Explanation</h2>
+                <div id="explanation-output">
+                    <p>Your explanation will appear here.</p>
+                </div>
+            </section>
+
+            <section id="key-points-section">
+                <h2>Key Points</h2>
+                <div id="key-points-output">
+                    <p>Key points will appear here.</p>
+                </div>
+            </section>
+
+            <section id="flashcards-section">
+                <h2>Flashcards</h2>
+                <div id="flashcards-output">
+                    <p>Flashcards will appear here.</p>
+                </div>
+            </section>
+
+            <section id="quiz-section">
+                <h2>Quiz</h2>
+                <div id="quiz-output">
+                    <p>Your quiz will appear here.</p>
+                </div>
+            </section>
+
+            <section id="audio-section">
+                <h2>Listen</h2>
+                <p id="audio-status">Audio will appear here.</p>
+                <audio id="audio-player" controls></audio>
+            </section>
+
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
